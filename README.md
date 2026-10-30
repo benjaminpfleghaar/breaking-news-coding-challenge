@@ -9,7 +9,7 @@ Clicking it opens a news feed with links to various articles.
 
 Clone the repository or try the live demo on Vercel.
 
-**Live Demo:** [Link to be added]
+**Live Demo: [Breaking News](https://breaking-news-coding-challenge.vercel.app)**
 
 > [!TIP]
 > Press `Shift + C` to toggle the news feed between populated and empty states.
