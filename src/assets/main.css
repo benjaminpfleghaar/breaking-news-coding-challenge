@@ -1,0 +1,54 @@
+:root {
+    --color-white: #ffffff;
+
+    --color-gray-10: #f4f4f4;
+    --color-gray-30: #c6c6c6;
+    --color-gray-40: #a8a8a8;
+    --color-gray-60: #6f6f6f;
+    --color-gray-100: #161616;
+
+    --color-purple-30: #d4bbff;
+    --color-purple-40: #be95ff;
+
+    --color-orange-40: #ff832b;
+}
+
+:root {
+    --color-bg: var(--color-white);
+    --color-bg-mute: var(--color-gray-10);
+
+    --color-link: var(--color-gray-60);
+    --color-link-hover: var(--color-gray-100);
+
+    --color-btn: var(--color-purple-30);
+    --color-btn-hover: var(--color-purple-40);
+    --color-btn-disabled: var(--color-gray-30);
+    --color-btn-disabled-hover: var(--color-gray-40);
+
+    --color-badge: var(--color-orange-40);
+    --color-badge-txt: var(--color-white);
+    --color-badge-disabled: var(--color-gray-60);
+    --color-badge-txt-disabled: var(--color-gray-10);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: var(--color-bg-mute);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
