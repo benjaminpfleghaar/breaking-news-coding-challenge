@@ -5,7 +5,7 @@ import EmptyBox from "@/assets/images/box-empty.svg";
 import { breakingNews } from "@/api/data.ts";
 import { useDrag } from "@/utils/useDrag.ts";
 import { useEventListener } from "@/utils/useEvent.ts";
-import { computed, onMounted, ref, useId, useTemplateRef } from "vue";
+import { computed, ref, useId, useTemplateRef } from "vue";
 
 const popoverId = `popover-${useId()}`;
 const anchorName = `--anchor-${useId()}`;
@@ -22,7 +22,8 @@ function toggleNewsData(e: KeyboardEvent) {
 }
 
 useEventListener(document, "keydown", toggleNewsData);
-onMounted(() => useDrag(buttonRef.value));
+
+const { posX, posY } = useDrag(buttonRef, { startX: 48, startY: 48 });
 </script>
 
 <template>
@@ -32,8 +33,8 @@ onMounted(() => useDrag(buttonRef.value));
     ref="buttonRef"
     :class="{ 'button-disabled': !hasNews }"
     :popovertarget="hasNews ? popoverId : null"
-    :style="`left: 48px; top: 48px; anchor-name: ${anchorName}`"
     :aria-label="`Open breaking news feed (${newsData.length})`"
+    :style="`left: ${posX}px; top: ${posY}px; anchor-name: ${anchorName};`"
   >
     <img
       alt=""
